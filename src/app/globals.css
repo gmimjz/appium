@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --color-black: #0a0a0a;
+  --color-white: #f0f0f0;
+  --color-green: #c4e538;
+  --color-yellow: #ffc312;
+  --color-red: #ea2027;
+  --color-blue: #12cbc4;
+  --color-violet: #9980fa;
+  --color-turquoise: #006266;
+  --color-pink: #ed4c67;
+  --color-gray: #1a1a1a;
+}
+
+@layer base {
+  body {
+    @apply text-white bg-black text-sm;
+  }
+}
+
+@source inline("bg-{green,yellow,red,blue,violet}");
+
+.swiper-pagination-bullet {
+  width: 64px !important;
+  border-radius: 8px !important;
+  background-color: var(--color-white) !important;
+  opacity: 0.25;
+  margin-right: 16px;
+}
+
+.swiper-pagination-bullet:last-child {
+  margin-right: 0;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--color-white) !important;
+}
