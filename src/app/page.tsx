@@ -120,8 +120,8 @@ export default function Home() {
           </div>
         </Section>
         <Section title="Jak działamy">
-          <div className="flex flex-col gap-8 lg:flex-row gap-4 lg:gap-8">
-            <div className="flex flex-col gap-8 md:gap-4 lg:gap-8 md:flex-row lg:w-[calc(50%-16px)]">
+          <div className="flex flex-col">
+            <div className="flex flex-col md:flex-row">
               <Step number={1} title="Analiza">
                 Zaczynamy od poznania Twojego biznesu oraz celów. Dokładnie
                 analizujemy potrzeby, by zaproponować projekt idealnie
@@ -138,18 +138,18 @@ export default function Home() {
                 na każdym kroku.
               </Step>
             </div>
-            <div className="flex flex-col gap-8 md:gap-4 lg:gap-8 md:flex-row lg:w-[calc(50%-16px)]">
-              <Step number={4} title="Testowanie">
+            <div className="flex flex-col md:flex-row">
+              <Step number={4} title="Testowanie" isDown>
                 Sprawdzamy, czy aplikacja działa bez zarzutu, eliminujemy błędy
                 i optymalizujemy działanie. Testujemy na różnych urządzeniach i
                 przeglądarkach, by zapewnić pełną kompatybilność.
               </Step>
-              <Step number={5} title="Wdrożenie">
+              <Step number={5} title="Wdrożenie" isDown>
                 Stawiamy aplikację na serwerze, w sklepie lub na urządzeniu,
                 dbając o to, żeby wszystko działało sprawnie i bez
                 niespodzianek.
               </Step>
-              <Step number={6} title="Utrzymanie">
+              <Step number={6} title="Utrzymanie" isDown>
                 Zapewniamy wsparcie techniczne, aktualizacje oraz dalszy rozwój
                 projektu, by aplikacja stale spełniała Twoje oczekiwania i była
                 bezpieczna.

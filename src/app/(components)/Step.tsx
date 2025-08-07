@@ -1,15 +1,23 @@
+import { twMerge } from "tailwind-merge";
+
 type Props = {
   number: number;
   title: string;
+  isDown?: boolean;
   children: string;
 };
 
-export const Step = ({ number, title, children }: Props) => {
+export const Step = ({ number, title, isDown, children }: Props) => {
   return (
-    <div className="w-full flex flex-col gap-4 w-[calc(33.33%-21.33px)] md:w-[calc(33.33%-10.67px)]">
-      <div className="bg-turquoise p-4 flex flex-col gap-2 rounded-xl">
-        <p>{number}</p>
-        <p className="text-xl font-bold">{title}</p>
+    <div
+      className={twMerge(
+        "flex flex-col gap-2 border border-gray p-4 md:p-8 border-b-0 md:border-r-0 last:border-r md:w-[33.33%]",
+        isDown && "md:border-b last:border-b"
+      )}
+    >
+      <div className="flex flex-col gap-2 rounded-xl">
+        <p className="text-xl">{number}</p>
+        <p className="text-3xl font-bold">{title}</p>
       </div>
       <p>{children}</p>
     </div>
