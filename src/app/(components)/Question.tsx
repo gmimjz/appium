@@ -11,7 +11,7 @@ type Props = {
 export const Question = ({ question, isOpen, onClick, children }: Props) => {
   return (
     <div onClick={() => onClick()}>
-      <div className="h-12 flex justify-between items-center">
+      <div className="py-4 flex justify-between items-center">
         <p className="text-xl font-bold">{question}</p>
         <div className={twMerge("duration-500", isOpen && "rotate-45")}>
           <VscAdd size={24} />
