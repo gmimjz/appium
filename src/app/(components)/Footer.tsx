@@ -28,7 +28,7 @@ export const Footer = () => {
                   <p>Główna</p>
                 </div>
               </div>
-              <div className="flex flex-col gap-4a w-full md:w-[160px] lg:w-[192px]">
+              <div className="flex flex-col gap-4 w-full md:w-[160px] lg:w-[192px]">
                 <p className="text-xl font-bold">Sociale</p>
                 <div className="flex flex-col gap-2">
                   <p className="underline">
