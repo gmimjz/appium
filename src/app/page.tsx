@@ -20,6 +20,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { ReactLenis } from "lenis/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
+import { isMobile } from "react-device-detect";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -54,7 +55,7 @@ export default function Home() {
       ref={containerRef}
     >
       <ReactLenis root />
-      <Cursor isArrow={isArrow} />
+      {!isMobile && <Cursor isArrow={isArrow} />}
       <Header />
       <div className="flex flex-col gap-32">
         <Section title="Aplikacje, aplikacje, aplikacje">

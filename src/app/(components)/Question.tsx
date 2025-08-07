@@ -13,7 +13,7 @@ export const Question = ({ question, isOpen, onClick, children }: Props) => {
     <div onClick={() => onClick()}>
       <div className="h-12 flex justify-between items-center">
         <p className="text-xl font-bold">{question}</p>
-        <div className={twMerge(isOpen && "rotate-45 duration-500")}>
+        <div className={twMerge("duration-500", isOpen && "rotate-45")}>
           <VscAdd size={24} />
         </div>
       </div>
