@@ -8,7 +8,9 @@ type Props = {
 export const Input = ({ title, error, ...props }: Props) => {
   return (
     <div className="w-full relative">
-      <p className="text-black">{title}</p>
+      <label className="text-black" htmlFor={props.id}>
+        {title}
+      </label>
       <input
         type="text"
         className="w-full outline-0 border-b border-black text-black text-xl"

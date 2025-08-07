@@ -255,11 +255,13 @@ export default function Home() {
               <Input
                 title="Imię"
                 error={errors.name?.message}
+                id="imie"
                 {...register("name", { required: "Imię jest wymagane" })}
               />
               <Input
                 title="E-mail"
                 error={errors.email?.message}
+                id="e-mail"
                 {...register("email", {
                   required: "Adres e-mail jest wymagany",
                   pattern: {
@@ -271,6 +273,7 @@ export default function Home() {
             </div>
             <Textarea
               title="Opowiedz nam co potrzebujesz?"
+              id="content"
               error={errors.message?.message}
               {...register("message", {
                 required: "Wiadomość jest wymagana",
