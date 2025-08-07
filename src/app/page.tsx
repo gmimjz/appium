@@ -23,6 +23,7 @@ import { Pagination } from "swiper/modules";
 import { isMobile } from "react-device-detect";
 import "swiper/css";
 import "swiper/css/pagination";
+import { useMediaQuery } from "usehooks-ts";
 
 type Inputs = {
   name: string;
@@ -47,6 +48,8 @@ export default function Home() {
 
   const paginationRef = useRef<HTMLDivElement | null>(null);
   const containerRef = useRef(null);
+
+  const isMd = useMediaQuery("(min-width: 768px)");
 
   return (
     <div
@@ -162,7 +165,7 @@ export default function Home() {
           <div className="pb-8">
             <Swiper
               spaceBetween={32}
-              slidesPerView={2}
+              slidesPerView={isMd ? 2 : 1}
               pagination={{
                 clickable: true,
                 el: paginationRef.current,
@@ -195,7 +198,10 @@ export default function Home() {
                 </Review>
               </SwiperSlide>
             </Swiper>
-            <div ref={paginationRef} className="flex justify-center mt-8"></div>
+            <div
+              ref={paginationRef}
+              className="flex justify-center mt-4 md:mt-8"
+            ></div>
           </div>
         </Section>
         <Section title="Nasze realizacje">

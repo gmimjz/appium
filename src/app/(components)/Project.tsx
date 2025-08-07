@@ -23,7 +23,7 @@ export const Project = ({
   return (
     <div
       className={twMerge(
-        "flex flex-col gap-4 relative border p-4 md:p-8 border-gray group hover:bg-white duration-500 cursor-none",
+        "flex flex-col gap-4 relative border p-4 md:p-8 border-gray group hover:bg-white duration-500 transition-colors cursor-none",
         !isLast && "border-b-0 lg:border-b lg:border-r-0"
       )}
       onMouseEnter={() => onHover()}
@@ -39,10 +39,12 @@ export const Project = ({
         height={1080}
         className="w-full h-auto"
       />
-      <p className="text-xl font-bold group-hover:text-black duration-500">
+      <p className="text-xl font-bold group-hover:text-black duration-500 transition-colors">
         {title}
       </p>
-      <p className="group-hover:text-black duration-500">{children}</p>
+      <p className="group-hover:text-black transition-colors duration-500">
+        {children}
+      </p>
     </div>
   );
 };
